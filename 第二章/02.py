@@ -1,3 +1,5 @@
+#简单的实现了k近邻算法
+
 from numpy import *
 import operator
 
