@@ -40,4 +40,5 @@ def test1():
 def file2matrix(filename):
     fr = open(filename)
     numberOfLines = len(fr.readlines())
+    returnMat = zeros((numberOfLines, 3))
     
