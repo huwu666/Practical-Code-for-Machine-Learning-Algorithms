@@ -25,5 +25,19 @@ def classify0(inX, dataSet, labels, k):
     for i in range(k):
         voteIlabel = labels[sortedDistIndicies[i]]
         classCount[voteIlabel] = classCount.get(voteIlabel, 0) + 1
-        maxClassCount = max(classCount, key = classCount.get)
-        return maxClassCount
+       
+    maxClassCount = max(classCount, key = classCount.get)
+    return maxClassCount
+
+
+def test1():
+    
+    group, labels = createDataSet()
+    print(str(group))
+    print(str(labels))
+    print(classify0([0.1, 0.1], group, labels, 3))
+
+def file2matrix(filename):
+    fr = open(filename)
+    numberOfLines = len(fr.readlines())
+    
